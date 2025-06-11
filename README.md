@@ -54,7 +54,7 @@ Esta aplicación fue desarrollada como una propuesta de mejora sobre la interfaz
 ### 1. Clonar el repositorio
 
 ```bash
-git https://github.com/michelle-gm/dashboards_api_michelleGutierrezMarchena.git
+git clone https://github.com/michelle-gm/dashboards_api_michelleGutierrezMarchena.git
 cd dashboards_api_michelleGutierrezMarchena 
 ```
 
