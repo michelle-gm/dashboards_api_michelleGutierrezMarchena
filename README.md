@@ -54,8 +54,8 @@ Esta aplicación fue desarrollada como una propuesta de mejora sobre la interfaz
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/nombre-del-repositorio.git
-cd nombre-del-repositorio 
+git https://github.com/michelle-gm/dashboards_api_michelleGutierrezMarchena.git
+cd dashboards_api_michelleGutierrezMarchena 
 ```
 
 ### 2. Instalar dependencias
