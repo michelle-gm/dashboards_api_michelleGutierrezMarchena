@@ -1,0 +1,224 @@
+/* Estilo base para el dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    padding: 24px;
+    background: linear-gradient(135deg, #eef2f7, #f6f9fc);
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tarjetas con estilos modernos */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e6ed;
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Encabezado de cada card */
+.card-header {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #34495e;
+}
+
+/* Ajuste del icono y título */
+.card-header span {
+    margin-left: 4px;
+}
+
+/* Cuerpo de cada card */
+.card-body {
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+/* Secciones internas dentro de card */
+.card-section {
+    margin-bottom: 16px;
+}
+
+/* Etiquetas dentro de secciones */
+.card-section label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* Textos e inputs */
+.card-body p,
+.card-body select {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Meta info compacta */
+.meta-info {
+    margin-top: 12px;
+    background-color: #f8f9fc;
+    padding: 12px;
+    border-left: 4px solid #3498db;
+    border-radius: 8px;
+}
+
+.meta-info p {
+    margin-bottom: 6px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Select mejorado */
+.card-body select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fefefe;
+    transition: border 0.2s;
+}
+
+.card-body select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Imagen previa */
+.card-body img {
+    max-width: 100%;
+    margin-top: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card-body img:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo para tarjeta combinada: Proyectos + Detalles */
+.project-details-card .split-body {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+.card-subheader {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 12px;
+    gap: 8px;
+    color: #2c3e50;
+}
+
+.section-title {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    color: #34495e;
+}
+
+.project-info p,
+.meta-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Select visual mejorado */
+.styled-select {
+    padding: 12px 14px;
+    border: 2px solid #dce3ec;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    font-size: 15px;
+    font-weight: 500;
+    color: #34495e;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.styled-select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Total resaltado */
+.highlight-total {
+    background-color: #ecf5ff;
+    padding: 10px 14px;
+    margin-top: 12px;
+    border-left: 4px solid #3498db;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Imagen previa refinada */
+.preview-image-wrapper {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.preview-image-wrapper img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-image-wrapper img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .project-details-card .split-body {
+        flex-direction: column;
+    }
+}
+
